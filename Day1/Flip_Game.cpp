@@ -5,7 +5,6 @@ bool canNinjaWin(string& str) {
     if(str.length() < 2){
         return false;
     }
-            cout<<str<<endl;
 
     //To check in a string if there are consecutive "$$" 's then replace it by ** AND again calling the function
     //recursively for the modified string. If the string is modified once and in "odd" no.s then true is returned else false

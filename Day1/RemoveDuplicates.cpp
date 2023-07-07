@@ -4,13 +4,14 @@ using namespace std;
 void removeDuplicateFromString(string &s,string &ans,unsigned int i){
 
     //To Terminate the recursive call once the value of i
-    //is equal to the length of the string.
+    //is equal to the length of the string. 
     if(i==s.length()) return;
 
     //if the current character is equal to next character then 
     //calling the function again for next character else 
     //pushing the current character in an empty string & then
     //calling the function again.
+
     if(s[i]==s[i+1]){
         removeDuplicateFromString(s,ans,i+1);
     }
