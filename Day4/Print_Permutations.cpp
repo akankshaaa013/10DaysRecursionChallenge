@@ -17,7 +17,7 @@ void solve(unsigned int index,string &s,vector<string> &ans){
     The for loop iteartes over the each character of the string. for character at index posititon, it allows to find the
     permutation with each character of the remaining string.
 
-    The first swap() function swaps the index character with he current ith character and then we claa the funtion again recursively.
+    The first swap() function swaps the index character with the current ith character and then we call the funtion again recursively.
     The second swap() function is used to restore the orignal string since we are passing the
     string by reference. So any changes made to the string will be reflected in the orignal string too.
     

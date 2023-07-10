@@ -4,7 +4,7 @@ using namespace std;
 void solve(string &s,unsigned int i,string& ans){
 
     /*Base case : If i is equal to length of the string then push the last character 
-    into the ans string if and only if the ans string is not empty and atlast return.
+    into the ans string if and only if the ans string is not empty and at last return.
     */
     
     if(i == s.length()){

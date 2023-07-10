@@ -4,7 +4,7 @@ using namespace std;
 void Solve(string &s,int n,int currIndex,string res,int resIndex,vector<string>& ans){
 	
 	/*
-	if the currIndex is equal to n it basically indicates that the end f the string is reached and
+	if the currIndex is equal to n it basically indicates that the end of the string is reached and
 	if resIndex is equal to 4 indicating a valid IP Address is formed the current res is pushed to ans vector after removing the trailing dot
 	*/
 

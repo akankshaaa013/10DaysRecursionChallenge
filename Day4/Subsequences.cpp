@@ -13,6 +13,7 @@ void solve(string str,unsigned int index,string res,vector<string>& ans){
 	solve(str,index+1,res,ans);
 
 	res+=str[index];
+	
 	solve(str,index+1,res,ans);
 }
 
