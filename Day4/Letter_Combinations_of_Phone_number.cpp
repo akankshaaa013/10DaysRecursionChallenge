@@ -58,7 +58,7 @@ int main(){
     cin>>s;
 
     vector<string> ans1 = combinations(s);
-
+	cout<<"hello";
     for(auto i : ans1){
         cout<<i<<"   ";
     }
