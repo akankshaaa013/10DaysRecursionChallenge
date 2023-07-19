@@ -37,8 +37,8 @@ bool isAnyMapping(vector<string>& words,unsigned int row,unsigned int col,unsign
     // Create a variable 'SIGN' to check whether we have to add it or subtract it.
     int sign;
 
-// if the current row is the last row in the matrix then the sin variable is set to -1 denoting that digit must be subracted from the balance.
-// else the sign variable is set to 1 indicating digit must be added.
+    // if the current row is the last row in the matrix then the sin variable is set to -1 denoting that digit must be subracted from the balance.
+    // else the sign variable is set to 1 indicating digit must be added.
     if (row < totalRows - 1) {
         sign = 1;
     }
@@ -59,8 +59,8 @@ bool isAnyMapping(vector<string>& words,unsigned int row,unsigned int col,unsign
     else {
         for (int i = 0; i < 10; i++) {
 
-            // If the current digit is not mapped to a letter and the mapping is valid, then it maps a letter to the digit and recursively calls
-            // isAnyMapping() function for the next row of the same column with the new paiing. 
+            // If the current digit is not mapped to a letter and & there are no leading 0's & the mapping is valid, then it maps a letter to the digit and recursively calls
+            // isAnyMapping() function for the next row of the same column with the new pairing. 
             if (digToLet[i] == '-' && (i != 0 || (i == 0 && w.length() == 1) || col != w.length() - 1)) {
                 digToLet[i] = letter;
                 letToDig[letter] = i;
@@ -82,7 +82,9 @@ bool isAnyMapping(vector<string>& words,unsigned int row,unsigned int col,unsign
         }
     }
 
-    // If nothing is correct then just return false.
+/*If the mapping is not valid or if the digit is not mapped then we try to map the letter with a new digit from 0 - 9 */
+
+    // If nothing is correct then just return false...
     return false;
 }
 
@@ -94,6 +96,7 @@ bool isSolvable(int m, vector<string>& words, string result) {
     // Calculating the total no. of rows and columns required to store all the strings in the words vector.
     unsigned int totalRows;
     unsigned int totalCols = 0;
+
 
     // Initialize 'TOTALROWS' with the size of the vector.
     totalRows = words.size();
@@ -112,6 +115,7 @@ bool isSolvable(int m, vector<string>& words, string result) {
 
     // Create an array for the digit to letter mapping.
     char digToLet[10];
+
     for (int i = 0; i < 10; i++) {
         digToLet[i] = '-';
     }
