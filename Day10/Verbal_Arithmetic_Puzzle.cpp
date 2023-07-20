@@ -84,7 +84,7 @@ bool isAnyMapping(vector<string>& words,unsigned int row,unsigned int col,unsign
 
 /*If the mapping is not valid or if the digit is not mapped then we try to map the letter with a new digit from 0 - 9 */
 
-    // If nothing is correct then just return false...
+    // If nothing is correct then just return false.
     return false;
 }
 
